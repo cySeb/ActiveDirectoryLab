@@ -1,6 +1,8 @@
 <h1>Active Directory - Home Lab</h1>
 
- 
+<h1>Youtube in depth demonstration</h1> 
+
+[https://www.youtube.com/@CySeb9](https://youtu.be/vu5Y0v-0DhQ?si=y6r8eKvjTclps-F6)
 
 <h2>Description</h2>
 In this lab I will walk you through how to create an Active Directory home lab environment using Oracle Virtual Box. Through the configuration and operating of this lab we will understand how Active Directory and Windows networking works.
@@ -17,7 +19,11 @@ In this lab I will walk you through how to create an Active Directory home lab e
 - <b>Windows 10</b>
 - <b>Windows Server 2016</b>
 
-<h2>Walk-through:</h2>
+<h2>Project Overview:</h2>
+<p align="center">
+<img src="https://i.imgur.com/bX2D8SL.png" height="60%" width="60%" alt=""/>
+
+<h2>Walk-through</h2>
 
 <h2>Setting up the Virtual Machine:</h2>
 <p align="center">
@@ -194,39 +200,74 @@ Log in with the new account:<br/>
 <br />
 <br />
 <h2>Executing the Powershell Script to create our users:</h2>
+
+[Powershell script download](https://github.com/cySeb/ActiveDirectoryLab/raw/main/AD%20PS.zip)
+
 <p align="center">
-[Power Shell script for creating users](https://github.com/cySeb/ActiveDirectoryLab/raw/main/AD%20PS.zip)
-<img src="" height="60%" width="60%" alt=""/>
+On Powershell ISE, navigate to the directory where the file is. Type the command: 'Set-ExecutionPolicy Unrestricted' and press F5 to run the script. If executed properly we will get this result:<br/>
+<img src="https://i.imgur.com/Mt0WGzL.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-Insert text here:<br/>
-<img src="insert URL" height="60%" width="60%" alt=""/>
+Once the script is done, we can go to Active Directory Users and Computers and see the new _USERS folder with all the users we created:<br/>
+<img src="https://i.imgur.com/OarMwkt.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-Insert text here:<br/>
-<img src="insert URL" height="60%" width="60%" alt=""/>
+<h2>Installing and Configuring the Windows 10 Client:</h2>
+<p align="center"> 
+Create a new virtual machine in Oraclebox following the same setup we did when we created our Domain Controller. Use the Windows 10 iso for this:<br/>
+<img src="https://i.imgur.com/ed4py66.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-Insert text here:<br/>
-<img src="insert URL" height="60%" width="60%" alt=""/>
+On the settings for the client, go to Network > Adapter 1 and attach it to an internal network:<br/>
+<img src="https://i.imgur.com/PXFnUSQ.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-Insert text here:<br/>
-<img src="insert URL" height="60%" width="60%" alt=""/>
+Start the machine and go through installation. Make sure to select 'I dont have a product key':<br/>
+<img src="https://i.imgur.com/qOfUsL3.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Select Windows 10 Pro:<br/>
+<img src="https://i.imgur.com/YJecesY.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Once it restarts, make sure to use the following options. 'I dont have internet' 'Continue with limited setup':<br/>
+<img src="https://i.imgur.com/iCFMfEL.png" height="60%" width="60%" /> <img src="https://i.imgur.com/Q69vuAS.png" height="60%" width="60%" />
+<br />
+<br />
+Make any username and password:<br/>
+<img src="https://i.imgur.com/pFFOrPL.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Put any answer for the security questions:<br/>
+<img src="https://i.imgur.com/6d6sXfN.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Select 'not now':<br/>
+<img src="https://i.imgur.com/9q85rK6.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Once done installing, type in command prompt in the search bar and type the command 'ipconfig'. We should see the following:<br/>
+<img src="https://i.imgur.com/DyJ2BJF.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Right click start > system > rename this PC (advanced):<br/>
+<img src="https://i.imgur.com/lYXaqGM.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+In the computer name tab, click change. Change the settings with the following then click ok:<br/>
+<img src="https://i.imgur.com/pRLAsDg.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Join the domain with our admin account we made before:<br/>
+<img src="https://i.imgur.com/pq47UrR.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+We then get the confirmation that we joined the domain and the client will restart:<br/>
+<img src="https://i.imgur.com/OhCoGuP.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
+Log in with our dedicated admin account:<br/>
+<img src="https://i.imgur.com/EfA93YU.png" height="60%" width="60%" alt=""/>
+<br />
+<br />
 </p>
