@@ -193,10 +193,10 @@ Log in with the new account:<br/>
 <img src="https://i.imgur.com/bQ8dcdb.png" height="60%" width="60%" alt=""/>
 <br />
 <br />
-<h2>Executing the Powershell script to make 1000 users in Active Directory:</h2>
+<h2>Executing the Powershell Script to create our users:</h2>
 <p align="center">
-Insert text here:<br/>
-<img src="insert URL" height="60%" width="60%" alt=""/>
+[Power Shell script for creating users](https://github.com/cySeb/ActiveDirectoryLab/raw/main/AD%20PS.zip)
+<img src="" height="60%" width="60%" alt=""/>
 <br />
 <br />
 Insert text here:<br/>
